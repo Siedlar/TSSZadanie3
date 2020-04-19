@@ -21,9 +21,15 @@ public class CarList {
         lista.add(new Car("Audi","RS7",500));
     }
 
-    public String dodaj(Car car){
+    public String dodaj(Car car) {
+        String napis="blad";
         lista.add(car);
        return ("Dodano do listy "+car.getMarka()+" "+car.getModel());
+    }
+    public String usun(Car car){
+        String napis="usun";
+        lista.remove(car);
+        return napis;
     }
     public String wypisz(){
         String napis="";

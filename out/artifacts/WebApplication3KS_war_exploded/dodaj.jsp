@@ -12,9 +12,9 @@
 </head>
 <body>
 <form action="${pageContext.request.contextPath}/hello" method="get">
-   <h3>Marka</h3> <input type="text" name="marka"/>
-    <h3>Model</h3>   <input type="text" name="model"/>
-    <h3>Konie Mechaniczne</h3>  <input type="text" name="km"/><br>
+   <h3>Marka</h3> <input type="text" name="marka"required/>
+    <h3>Model</h3>   <input type="text" name="model"required/>
+    <h3>Konie Mechaniczne</h3>  <input type="number" name="km" required/><br><br>
     <input type="submit" name="funkcja" value="dodaj"/>
 </form>
 </body>

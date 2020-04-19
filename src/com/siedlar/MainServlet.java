@@ -15,7 +15,7 @@ public class MainServlet  extends HttpServlet {
         PrintWriter out=resp.getWriter();
         HttpSession session = req.getSession(true);
         CarList lista = (CarList) session.getAttribute("obiekt");
-      if(req.getParameter("funkcja").equals("wyswietl")){
+      if(req.getParameter("funkcja").equals("Wyswietl samochody")){
           String wynik=lista.wypisz();
           out.println("<html>");
           out.println("<body>");
