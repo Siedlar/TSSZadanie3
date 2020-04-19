@@ -16,9 +16,9 @@ public class CarList {
     }
 
     public CarList() {
-        lista.add(new Car("BMW","M3",500));
-        lista.add(new Car("BMW","M4",320));
-        lista.add(new Car("Audi","RS7",500));
+        lista.add(new Car("BMW","M3",420));
+        lista.add(new Car("BMW","M4",560));
+        lista.add(new Car("Audi","RS7",605));
     }
 
     public String dodaj(Car car) {
@@ -26,9 +26,10 @@ public class CarList {
         lista.add(car);
        return ("Dodano do listy "+car.getMarka()+" "+car.getModel());
     }
-    public String usun(Car car){
+    public String usun(int id) throws IndexOutOfBoundsException{
         String napis="usun";
-        lista.remove(car);
+        napis="Usunieto z bazy " +lista.get(id-1).toString();
+        lista.remove(lista.get(id-1));
         return napis;
     }
     public String wypisz(){

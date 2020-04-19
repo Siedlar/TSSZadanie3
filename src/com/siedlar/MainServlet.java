@@ -36,7 +36,26 @@ public class MainServlet  extends HttpServlet {
           lista.dodaj(car);
           System.out.println( lista.wypisz());
           session.setAttribute("obiekt",lista);
-        }
+        }else if(req.getParameter("funkcja").equals("usun")){
+          int id=Integer.parseInt(req.getParameter("id"));
+          String wiadomosc=null;
+          try{
+         wiadomosc=lista.usun(id);
+              out.println("<html>");
+              out.println("<body>");
+              out.println(wiadomosc+"<br><br>");
+              out.println("<a href=\"index.jsp\">Powrot do widoku glownego</a>");
+              out.println("</body></html>");
+              session.setAttribute("obiekt",lista);
+          }catch (IndexOutOfBoundsException e){
+              out.println("<html>");
+              out.println("<body>");
+              out.println("Indeks o podanym id nie istnieje w bazie<br><br>");
+              out.println("<a href=\"index.jsp\">Powrot do widoku glownego</a>");
+              out.println("</body></html>");
+          }
+
+      }
     }
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {

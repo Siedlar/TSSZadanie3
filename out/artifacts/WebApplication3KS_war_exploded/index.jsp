@@ -30,11 +30,15 @@
 
     %></p>
   <table cellspacing="1" cellpadding="4" border="3">
+    <th> ID</th>
     <th> Marka</th>
     <th> Model</th>
     <th> Konie Mechaniczne</th>
     <%for(int row=0;row<listaAut.getLista().size();row++){%>
     <tr>
+      <td>
+        <% out.print(row+1);%>
+      </td>
       <td>
         <% out.print(listaAut.getLista().get(row).getMarka());%>
       </td>
@@ -54,6 +58,9 @@
   </form>
   <form action="dodaj.jsp" >
     <input type="submit" value="Przejdz do strony dodawania" />
+  </form>
+  <form action="usun.jsp" >
+    <input type="submit" value="Przejdz do strony usowania" />
   </form>
   </body>
 </html>

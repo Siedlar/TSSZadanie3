@@ -15,7 +15,8 @@
    <h3>Marka</h3> <input type="text" name="marka"required/>
     <h3>Model</h3>   <input type="text" name="model"required/>
     <h3>Konie Mechaniczne</h3>  <input type="number" name="km" required/><br><br>
-    <input type="submit" name="funkcja" value="dodaj"/>
+    <input type="submit" name="funkcja" value="dodaj"/><br><br>
+    <a href="index.jsp">Powrot do widoku glownego</a>
 </form>
 </body>
 </html>
